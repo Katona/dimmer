@@ -53,7 +53,11 @@ module case_pins() {
 
 module main() {
     union() {
-        case_top([84, 66, 30], 3, 2);
+        difference() {
+            case_top([84, 66, 30], 3, 2);
+            // Cut out for cables ...
+            translate([0, 19, 12.5]) cube([84, 10, 5], center=true);
+        }
         translate([0, 0, -13]) {
             case_pins();
             pcb_columns();
