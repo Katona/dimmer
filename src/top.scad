@@ -8,7 +8,6 @@ module case_top(size, radius, thickness) {
     
     difference() {
         cube([width, height, depth], center=true);
-
         translate([0, 0, thickness]) {
             // make case hollow
             cube([width - thickness * 2, height - thickness * 2, depth], center=true);
