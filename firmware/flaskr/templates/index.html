@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #root {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        const brightness = (brightness) => {
+            axios.post("/api/lamp/brightness", { brightness });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="root">
+        <div>
+            <button onclick="brightness(100)">Bright</button>
+        </div>
+        <div>
+            <button onclick="brightness(50)">Medium</button>
+        </div>
+        <div>
+            <button onclick="brightness(25)">Dim</button>
+        </div>
+        <div>
+            <button onclick="brightness(0)">Off</button>
+        </div>
+    </div>
+</body>
+
+</html>
