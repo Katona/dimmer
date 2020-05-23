@@ -15,6 +15,5 @@ def lamp():
 @bp.route('/lamp/brightness', methods=['POST'])
 def lamp_on():
  brightness = request.json['brightness']
- print(brightness)
  led_strip.update_brightness(brightness)
- return jsonify({"state": "on"})
+ return jsonify({'brightness': brightness})
