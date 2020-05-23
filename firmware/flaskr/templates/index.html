@@ -16,6 +16,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: stretch;
+        }
+
+        .control {
+            padding: 5px;
+        }
+        .control button {
+            width: 100px;
         }
     </style>
     <script>
@@ -27,16 +35,16 @@
 
 <body>
     <div id="root">
-        <div>
+        <div class="control">
             <button onclick="brightness(100)">Bright</button>
         </div>
-        <div>
+        <div class="control">
             <button onclick="brightness(50)">Medium</button>
         </div>
-        <div>
+        <div class="control">
             <button onclick="brightness(25)">Dim</button>
         </div>
-        <div>
+        <div class="control">
             <button onclick="brightness(0)">Off</button>
         </div>
     </div>
