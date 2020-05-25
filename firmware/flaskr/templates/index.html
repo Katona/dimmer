@@ -2,28 +2,34 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//cdn.muicss.com/mui-0.10.2/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.2/js/mui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
         body {
-            justify-content: center;
-            text-align: center;
-            height: 100vh;
-            margin: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
 
         #root {
             height: 100%;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: stretch;
         }
 
         .control {
             padding: 5px;
+            flex-grow: 1;
+            text-align: center;
         }
         .control button {
-            width: 100px;
+            height: 100%;
+            width: 90%;
         }
     </style>
     <script>
@@ -36,16 +42,19 @@
 <body>
     <div id="root">
         <div class="control">
-            <button onclick="brightness(100)">Bright</button>
+            <button class="mui-btn mui-btn--raised" onclick="brightness(100)">Bright</button>
         </div>
         <div class="control">
-            <button onclick="brightness(50)">Medium</button>
+            <button class="mui-btn mui-btn--raised" onclick="brightness(50)">Medium</button>
         </div>
         <div class="control">
-            <button onclick="brightness(25)">Dim</button>
+            <button class="mui-btn mui-btn--raised" onclick="brightness(25)">Dim</button>
         </div>
         <div class="control">
-            <button onclick="brightness(0)">Off</button>
+            <button class="mui-btn mui-btn--raised" onclick="brightness(10)">Very Dim</button>
+        </div>
+        <div class="control">
+            <button class="mui-btn mui-btn--raised" onclick="brightness(0)">Off</button>
         </div>
     </div>
 </body>
