@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PACKAGE_NAME=flaskr-1.0.0-py3-none-any.whl
-HOST=dimmer@magic-wand.local
+HOST=dimmer@dimmer.local
 
 rm -r dist
 venv/bin/python3 setup.py bdist_wheel
