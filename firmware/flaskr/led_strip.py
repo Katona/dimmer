@@ -30,13 +30,14 @@ def update_brightness(percent):
 
 
 def brightness_animation_task(initial_brightness, target_brightness, exit):
-    step_count = 50
+    step_count = 100
     brightness = initial_brightness
     easing = QuadEaseInOut(start=initial_brightness, end = target_brightness, duration = step_count)
     step = 0
     while not exit.is_set() and step <= step_count:
-        brightness = easing.ease(step)
-        pi.hardware_PWM(pin, 20000, brightness)
+        brightness = int(easing.ease(step))
+        print(brightness)
+        pi.hardware_PWM(pin, 4000, brightness)
         step = step + 1
-        exit.wait(0.02)
+        exit.wait(0.01)
     return brightness
