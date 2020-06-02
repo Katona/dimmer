@@ -9,6 +9,7 @@ setup(
     install_requires=[
         'flask',
         'pigpio',
-        'waitress'
+        'waitress',
+        'easing-functions'
     ],
 )
