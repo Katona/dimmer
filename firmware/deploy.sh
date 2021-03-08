@@ -1,4 +1,5 @@
 #!/bin/sh
+. venv/bin/activate
 
 PACKAGE_NAME=flaskr-1.0.0-py3-none-any.whl
 HOST=dimmer@dimmer.local
